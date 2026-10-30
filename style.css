@@ -1,0 +1,149 @@
+:root {
+    --bg-main: #38bdf8; /* Warna biru pop */
+    --card-bg: #ffffff;
+    --stroke-dark: #0f172a;
+    --pop-green: #4ade80;
+    --pop-yellow: #facc15;
+    --pop-pink: #f472b6;
+    --pop-blue: #38bdf8;
+    --pop-purple: #c084fc;
+    --pop-orange: #fb923c;
+    --text-dark: #0f172a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    user-select: none;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* --- KARTU UTAMA WIDGET --- */
+.app-card {
+    background-color: var(--card-bg);
+    padding: 28px;
+    border-radius: 24px;
+    border: 4px solid var(--stroke-dark);
+    box-shadow: 10px 10px 0px var(--stroke-dark);
+    max-width: 440px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* --- HEADER --- */
+.app-header {
+    text-align: center;
+}
+
+.badge {
+    background-color: var(--pop-purple);
+    color: #ffffff;
+    border: 2px solid var(--stroke-dark);
+    padding: 4px 12px;
+    font-weight: 800;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.app-header h1 {
+    font-size: 1.35rem;
+    font-weight: 900;
+}
+
+.app-header p {
+    font-size: 0.8rem;
+    color: #475569;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+/* --- STATS ROW --- */
+.stats-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.stat-box {
+    background-color: #f8fafc;
+    border: 3px solid var(--stroke-dark);
+    padding: 8px 12px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 3px 3px 0px var(--stroke-dark);
+}
+
+.stat-box.score {
+    background-color: var(--pop-yellow);
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.stat-box strong {
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+/* --- CANVAS WRAPPER --- */
+.canvas-wrapper {
+    background-color: #0f172a;
+    border: 4px solid var(--stroke-dark);
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 0px var(--stroke-dark);
+}
+
+canvas {
+    display: block;
+    background-color: #0f172a;
+}
+
+/* --- CONTROL ACTIONS --- */
+.control-actions {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 8px;
+}
+
+.btn-action {
+    border: 3px solid var(--stroke-dark);
+    padding: 12px 10px;
+    border-radius: 12px;
+    font-weight: 900;
+    font-size: 0.82rem;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px var(--stroke-dark);
+    transition: all 0.15s ease;
+}
+
+.btn-action.drop { background-color: var(--pop-pink); }
+
+.btn-action.reset { background-color: var(--pop-green); }
+
+.btn-action:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px var(--stroke-dark);
+}
