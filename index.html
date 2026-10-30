@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galton Board Pinball Drop 🎯</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-card">
+        <!-- Header -->
+        <header class="app-header">
+            <span class="badge">kikisaja No. 127</span>
+            <h1>🎯 GALTON PINBALL DROP</h1>
+            <p>Jatuhkan bola, pantulkan di paku, dan dapatkan skor tertinggi!</p>
+        </header>
+
+        <!-- Stats Display -->
+        <div class="stats-row">
+            <div class="stat-box">
+                <span class="stat-label">Bola Dilepas</span>
+                <strong id="ball-count">0</strong>
+            </div>
+            <div class="stat-box score">
+                <span class="stat-label">Total Skor</span>
+                <strong id="total-score">0</strong>
+            </div>
+        </div>
+
+        <!-- Canvas Arena Galton Board -->
+        <div class="canvas-wrapper">
+            <canvas id="pinball-canvas" width="380" height="420"></canvas>
+        </div>
+
+        <!-- Action Controls -->
+        <div class="control-actions">
+            <button type="button" id="btn-drop" class="btn-action drop">🔴 JATUHKAN BOLA</button>
+
+            <button type="button" id="btn-reset" class="btn-action reset">🔄 RESET SKOR</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
